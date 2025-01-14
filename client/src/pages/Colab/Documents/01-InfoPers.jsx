@@ -4,33 +4,60 @@
 import NavLogin from "../../../components/NavLogin";
 import { Municipios, Nacionalidad} from "./const.js";
 import React, {useState} from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';                    // Componentes importados
 import { LocalizationProvider } from '@mui/x-date-pickers';    // para el date picker
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';                        // .
 
-import Autocomplete from '@mui/material/Autocomplete';      //Nuevo componente para listas
+import {InputLabel, Select} from '@mui/material';      //Nuevo componente para listas
 import { Typography, TextField, FormControlLabel, FormControl, FormLabel, Radio, RadioGroup, Box } from "@mui/material";
 
 
 function InfoPer(){
+const [dir, setDir] = useState('');
+const [mun, setMun] = useState('');
+const [nac, setNac] = useState('');
+const [nacion, setNacion] = useState('');
+const [gen, setGen] = useState('');
+const [rfc, setRfc] = useState('');
+
+const navigate = useNavigate();
+
+const handleSubmit = (event) => {
+event.preventDefault();
+
+        const previo = {
+            dir,
+            mun,
+            nac,
+            nacion,
+            gen,
+            rfc
+        }
+
+        navigate('/colab-info-pers', { state: previo });
+
+}
+
+    
     function RFCInput() {
-        const [value, setValue] = useState('');
-        const [error, setError] = useState(false);
+    const [value, setValue] = useState('');
+    const [error, setError] = useState(false);
       
         // Expresión regular para validar el RFC
-        const rfcRegex = /^[A-ZÑ&]{3,4}\d{6}[A-Z\d]{2}[A\d]$/i;
+    const rfcRegex = /^[A-ZÑ&]{3,4}\d{6}[A-Z\d]{2}[A\d]$/i;
+    
+    const handleChange = (event) => {
+    const newValue = event.target.value.toUpperCase(); // Convertir a mayúsculas automáticamente
+    setValue(newValue);
       
-        const handleChange = (event) => {
-        const newValue = event.target.value.toUpperCase(); // Convertir a mayúsculas automáticamente
-        setValue(newValue);
-      
-          // Validar el valor actual con la expresión regular
-          if (!rfcRegex.test(newValue)) {
-            setError(true);
-          } else{
-            setError(false);
-          }
+        // Validar el valor actual con la expresión regular
+        if (!rfcRegex.test(newValue)) {
+        setError(true);
+        } else{
+        setError(false);
+        }
         };
 
       return {value, error, handleChange};
@@ -45,7 +72,7 @@ function InfoPer(){
            
             <NavLogin/>
             
-            <Box>
+            <div>
                 <h1 className="encabezado-reg">Bienvenid@: Nombre de usuario </h1>      {/*Falta agregar la constante del usuario*/}
             
 
@@ -69,31 +96,9 @@ function InfoPer(){
                 Asegúrate de verificar la información antes de enviarla.
                 </p>
                 
-            </Box>
+            </div>
 
-            <main>
-            <Box>
-                <Box
-                component="form"
-                sx={{ '& > :not(style)': { m: 1, width: '43ch' } }}
-                noValidate
-                autoComplete="off"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                gap={2} // Espaciado entre los componentes
-                flexWrap="wrap" // Para manejar tamaños pequeños
-                >
-                
-                
-                <TextField
-                    required
-                    id="filled-multiline-flexible"
-                    label="Direccion"
-                    multiline
-                    maxRows={8}
-                />
-
+            {/* 
 
 
                 <Autocomplete
@@ -104,31 +109,12 @@ function InfoPer(){
                     autoSelect
                     />
 
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                format="DD - MM - YYYY"
-                timezone="system"
-                label="Fecha de nacimiento" />
-                </LocalizationProvider>
 
                 <Autocomplete
                     disablePortal
                     options={Nacionalidad}
                     renderInput={(params) => <TextField {...params} label="Nacionalidad" />}
                     />
-
-                <FormControl>
-                        <FormLabel id="radio-buttons-group-label">Género</FormLabel>
-                        <RadioGroup
-                            row
-                            aria-labelledby="radio-buttons-group-label"
-                            name="radio-buttons-group"
-                        >
-                        <FormControlLabel value="femenino" control={<Radio />} label="Femenino" />
-                        <FormControlLabel value="masculino" control={<Radio />} label="Masculino" />
-                        <FormControlLabel value="otro" control={<Radio />} label="Otro" />
-                    </RadioGroup>
-                    </FormControl>
 
 
                 <Box>
@@ -154,9 +140,105 @@ function InfoPer(){
             <br />
 
                 <button className="btn-cont-reg">Siguiente</button>
-            </Box>
-            </main>
+            </Box>*/}
+            <div className="form-index-colab">
+            <form className='form-campos-colab' onSubmit={handleSubmit}>
 
+                {/* Direccion */}
+                <div className='campos-card-index-colab'>
+                  <TextField 
+                      id="outlined-basic" 
+                      label="Dirección:" 
+                      variant="outlined" 
+                      name='direccion'
+                      sx={{width: '90%'}} 
+                      onChange={(e) => setDir(e.target.value)} 
+                      value={dir}
+                      required
+                  />
+                </div>
+
+                {/* Municipio */}
+                <div className='campos-card-index-colab'>
+                  <TextField 
+                    id="outlined-basic" 
+                    label="Municipio:" 
+                    variant="outlined" 
+                    name='municipio'
+                    sx={{width: '90%'}} 
+                    onChange={(e) => setMun(e.target.value)} 
+                    value={mun}
+                    required
+                  />
+                </div>
+
+                {/* Fecha de nacimiento */}
+
+                <div className='campos-card-index-colab'>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                format="DD - MM - YYYY"
+                timezone="system"
+                label="Fecha de nacimiento"
+                onChange={(e)=>setNac(e.target.value)}
+                required/>
+                </LocalizationProvider>
+                </div>
+
+                {/* Nacionalidad */}
+                <div className='campos-card-index-colab'>
+                  <TextField 
+                    id="outlined-basic" 
+                    label="Nacionalidad:" 
+                    variant="outlined" 
+                    name='Nacion'
+                    sx={{width: '90%'}} 
+                    onChange={(e) => setNacion(e.target.value)} 
+                    value={nacion}
+                    required
+                  />
+                </div>
+
+                {/* Genero */}
+                <div className='campos-card-index-colab'>
+                <FormControl>
+                    <FormLabel id="radio-buttons-group-label">Género</FormLabel>
+                    <RadioGroup
+                        row
+                        aria-labelledby="radio-buttons-group-label"
+                        name="radio-buttons-group"
+                        onChange={(e)=> setGen(e.target.value)}
+                        required
+                        >
+                
+                            <FormControlLabel value="f" control={<Radio />} label="Femenino" />
+                            <FormControlLabel value="m" control={<Radio />} label="Masculino" />
+                            <FormControlLabel value="otro" control={<Radio />} label="Otro" />
+                        
+                    </RadioGroup>
+                    </FormControl>
+                </div>
+                
+
+                {/* RFC */}
+                <div className='campos-card-index-colab'>
+                <TextField 
+                    id="outlined-basic" 
+                    label="RFC:" 
+                    variant="outlined" 
+                    name='RFC'
+                    sx={{width: '90%'}} 
+                    onChange={(e) => setRfc(e.target.value)} 
+                    value={rfc}
+                    required
+                  />
+                </div>
+
+                
+              
+              <button type='submit' className='footer-btn-index-colab'>Continuar</button>
+          </form>
+        </div>
         </Box>
 
 

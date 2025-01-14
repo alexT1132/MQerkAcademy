@@ -774,6 +774,25 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">Test de Inteligencia Emocional Bar-On </h1>
                         <br />
+                        <div className='contenedor-puntos'>
+                            <Grid container spacing={2} sx={{width: '95%'}}>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>0 = Totalmente en desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>1 = En desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>2 = Neutral</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>3 = De acuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>4 = Totalmente de acuerdo</p>
+                                </Grid>
+                            </Grid>
+                        </div>
                     </>
                 )}
                 {step === 14 && (
@@ -781,6 +800,25 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">Test de Inteligencia Emocional Bar-On </h1>
                         <br />
+                        <div className='contenedor-puntos'>
+                            <Grid container spacing={2} sx={{width: '95%'}}>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>0 = Totalmente en desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>1 = En desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>2 = Neutral</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>3 = De acuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>4 = Totalmente de acuerdo</p>
+                                </Grid>
+                            </Grid>
+                        </div>
                     </>
                 )}
                 {step === 15 && (
@@ -788,6 +826,25 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">Test de Inteligencia Emocional Bar-On </h1>
                         <br />
+                        <div className='contenedor-puntos'>
+                            <Grid container spacing={2} sx={{width: '95%'}}>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>0 = Totalmente en desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>1 = En desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>2 = Neutral</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>3 = De acuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>4 = Totalmente de acuerdo</p>
+                                </Grid>
+                            </Grid>
+                        </div>
                     </>
                 )}
                 {step === 16 && (
@@ -828,6 +885,7 @@ function Prueba() {
                 {step === 21 && (
                     <>
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <h1 className="titulo-form-colab primero">INDICACIÓN: En los siguientes ejercicios,
                                             selecciona el inciso de la figura que pertenece a la
                                             imagen.</h1>
@@ -837,14 +895,16 @@ function Prueba() {
                 {step === 22 && (
                     <>
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
+                        <h1 className="titulo-form-colab primero">Selecciona el inciso de la figura que pertenece a la imagen.</h1>
                         <br />
                     </>
                 )}
                 {step === 23 && (
                     <>
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
+                        <h1 className="titulo-form-colab primero">Seleccione el recuadro que mejor complete la secuencia.</h1>
                         <br />
                     </>
                 )}
@@ -863,6 +923,27 @@ function Prueba() {
                     </>
                 )}
                 {step === 26 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                    </>
+                )}
+                {step === 27 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                    </>
+                )}
+                {step === 28 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                    </>
+                )}
+                {step === 29 && (
                     <>
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
@@ -1574,8 +1655,8 @@ function Prueba() {
                             </Box>
                         </div>
                         <br />
-                        <div className="control-btns-steps welcome">
-                            <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button>
+                        <div className="control-btns-steps-one testing">
+                            {/* <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button> */}
                             <button type="submit" className="btn-next welcome-colab">Siguiente</button>
                         </div>
                     </form>
@@ -2169,8 +2250,8 @@ function Prueba() {
                             </Box>
                         </div>
                         <br />
-                        <div className="control-btns-steps welcome">
-                            <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button>
+                        <div className="control-btns-steps-one testing">
+                            {/* <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button> */}
                             <button type="submit" className="btn-next welcome-colab">Siguiente</button>
                         </div>
                     </form>
@@ -3208,7 +3289,7 @@ function Prueba() {
                         <div className="container-steps">
                             <Box sx={{ flexGrow: 1, marginLeft: 1, marginRight: 1 }}>
                                 <Grid container spacing={2}>
-                                    <Grid item xs={2.4} textAlign='center'>
+                                    {/* <Grid item xs={2.4} textAlign='center'>
                                         <p>4 = Muy de acuerdo</p>
                                     </Grid>
                                     <Grid item xs={2.4} textAlign='center'>
@@ -3222,7 +3303,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={2.4} textAlign='center'>
                                         <p>0 = Muy en desacuerdo</p>
-                                    </Grid>
+                                    </Grid> */}
                                     <Grid item xs={10}>
                                         <p className='pregunta-prueba'>1. Soy capaz de reconocer cuando mis emociones afectan mi desempeño en el trabajo.</p>
                                     </Grid>
@@ -3381,8 +3462,8 @@ function Prueba() {
                             </Box>
                         </div>
                         <br />
-                        <div className="control-btns-steps welcome">
-                            <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button>
+                        <div className="control-btns-steps-one testing">
+                            {/* <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button> */}
                             <button type="submit" className="btn-next welcome-colab">Siguiente</button>
                         </div>
                     </form>
@@ -4290,6 +4371,8 @@ function Prueba() {
                         </div>
                     </form>
                     )}
+
+                    {/* Las imagenes de las respuestas se ven pequeñas en vista de celular */}
                     {step === 21 && (
                         <form 
                         className='container-steps'
