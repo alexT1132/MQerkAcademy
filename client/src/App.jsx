@@ -12,6 +12,8 @@ import RegistroEstudiante from "./pages/RegisterEst";
 import ColabInfoPers from "./pages/Colab/Documents/01-InfoPers";        //Pagina de bienvenida e ingreso de informacion
 import ColabInfoAcad from "./pages/Colab/Documents/02-InfoAcad";
 
+import Dashcolab from './pages/Colab/Dash-colab';                       //Dashboard del colaborador
+
 
 import Colab from "./pages/Colab/Inicio";
 import WelcomeColab from "./pages/Colab/Welcome";
@@ -46,6 +48,8 @@ function App() {
                     
                     <Route path="/colab-info-pers" element={<ColabInfoPers />} />
                     <Route path="/colab-info-acad" element={<ColabInfoAcad />} />
+
+                    <Route path='/dash-colab' element={<Dashcolab/>}/>
 
                     <Route path="/colab" element={<Colab />} />
                     <Route path="/welcome-colab" element={<WelcomeColab />} />

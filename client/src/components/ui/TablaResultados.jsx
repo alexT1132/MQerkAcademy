@@ -36,6 +36,15 @@ export default function ColumnGroupingTable() {
 
   const TotalPuntos = resultBigfive + resultDass + resultZavic + resultBoron;
 
+  const resultado = (
+    resultBigfive > 65 &&
+    resultDass < 14 &&
+    resultZavic <= 110 &&
+    resultBoron < 120 &&
+    resultWais >= 150 &&
+    resultAcad <= 150
+  ) ? "Aceptado" : "Rechazado";
+
   return (
     <Paper sx={{ width: '100%' }}>
       <TableContainer sx={{ maxHeight: 580 }}>
@@ -127,8 +136,8 @@ export default function ColumnGroupingTable() {
                 <TableCell sx={{textAlign: 'center', color: 'blue'}}>
                     {TotalPuntos}
                 </TableCell>
-                <TableCell sx={{textAlign: 'center'}} >
-                    Aceptado / Rechazado
+                <TableCell sx={{textAlign: 'center', color: value==='Aceptado' ? 'green': value==='Rechazado' ? 'red': 'inherit'}} >
+                    {resultado}
                 </TableCell>
             </TableRow>
           </TableBody>

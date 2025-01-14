@@ -4151,7 +4151,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>10. Propón una actividad dinámica para enseñar un concepto complejo.</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             name="Wais10"
                                             value={Wais10}
                                             onChange={handleInputChange}
@@ -4216,7 +4217,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>13. ¿Cómo explicarías la importancia de tu materia?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             name="Wais13"
                                             value={Wais13}
                                             onChange={handleInputChange3}
@@ -4252,6 +4254,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             label="Escribe aqui tu respuesta:" 
                                             name="Wais15"
@@ -4282,6 +4285,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Wais16"
                                             value={Wais16}
@@ -4317,6 +4321,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Wais18"
                                             value={Wais18}
@@ -4352,6 +4357,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Wais20"
                                             value={Wais20}
@@ -4751,6 +4757,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica2"
                                             value={Academica2}
@@ -4786,6 +4793,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica4"
                                             value={Academica4}
@@ -4836,6 +4844,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                        autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica6"
                                             value={Academica6}
@@ -4892,6 +4901,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica9"
                                             value={Academica9}
@@ -4942,7 +4952,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>11. ¿Qué herramientas tecnológicas usarías para asesorar?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica11"
                                             value={Academica11}
@@ -4977,7 +4988,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>13. ¿Cómo equilibrarías la disciplina y la motivación?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica13"
                                             value={Academica13}
@@ -5012,7 +5024,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>15. ¿Qué importancia tiene la empatía en el rol de asesor?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica15"
                                             value={Academica15}
@@ -5063,7 +5076,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>17. ¿Qué harías si un estudiante rechaza tu ayuda constantemente?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica17"
                                             value={Academica17}
@@ -5099,6 +5113,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic"
                                             name="Academica19"
                                             value={Academica19}
@@ -5113,6 +5128,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica20"
                                             value={Academica20}
