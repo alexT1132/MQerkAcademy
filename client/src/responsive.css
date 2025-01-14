@@ -1,0 +1,372 @@
+@media (max-width:400px){
+  /*------------------------- NAVBAR 1 --------------------------*/
+    .topBar{
+        height: 12%;
+    }
+    .link-logo{
+        height: 100%;
+        width: 20%;
+      }
+      .logo{
+        width: 100%;
+      }
+      .title{
+        color: #fff;
+        font-size: 11px;
+        text-align: center;
+      }
+      .link-btn{
+        height: 100%;
+        width: 20%;
+      }
+      .btn-nav{
+        width: 100%;
+        height: 38px;
+        font-size: 8px;
+      }
+
+/* .......................................................... */
+
+  /*------------------------- INDEX --------------------------*/
+
+.space{
+    height: 40%;
+  }
+  .btn-option{
+    width: 35%;
+    height: 53px;
+    font-size: 20px;
+  }
+  .btns-extra{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30%;
+    right: 50%;
+    width: 10%;
+    transition: 3s ease;
+  }
+  .btn-option-extra button{
+    display: block;
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 4px;
+    outline: none;
+    border: 1px solid white;
+    background-image: linear-gradient(to right, #5115bc, #E6007E);
+    cursor: pointer;
+    color: #fff;
+    background-size: 200%;
+    transition: .5s;
+    text-transform: uppercase;
+  }
+
+  /* .......................................................... */
+
+/*--------------------------- NAVBAR 2 -----------------------*/
+
+.topBar-registro{
+  height: 12%;
+}
+.link-logo-two{
+  height: 100%;
+  width: 20%;
+}
+.logo-two{
+  width: 100%;
+}
+.title-two{
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+}
+.topbar-guardianes{
+  height: 100%;
+  width: 20%;
+}
+
+/* .......................................................... */
+
+/*--------------------------- REGISTRO -----------------------*/
+
+.Alert-message{
+  margin-top: -30%;
+  width: 70%;
+}
+.card-registro{
+  width: 70%;
+  height: 47%;
+}
+
+/* .......................................................... */
+
+/*---------------------------- LOGIN -------------------------*/
+.sectionLogin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login{
+  height: 55%;
+  width: 70%;
+  margin-top: -18%;
+}
+.card-login-header{
+  top: 25%; /* Posición vertical en el medio */
+  left: 51%; /* Posición horizontal en el medio */
+  transform: translate(-50%, -50%);
+}
+.Alert-message-login{
+  width: 70%;
+}
+
+/* .......................................................... */
+
+/*---------------------------- TOPBAR -------------------------*/
+
+.logo-mqerk{
+  display: none;
+}
+.section-noti{
+  display: none;
+}
+.barra-nav{
+  width: 77%;
+}
+
+/* .......................................................... */
+
+/*---------------------------- CURSOS -------------------------*/
+
+.noCurso{
+  width: 54%;
+  font-size: 15px;
+}
+
+.disponibles{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.space-u{
+  height: 0;
+}
+.space-p{
+  height: 0;
+}
+.space-ps{
+  height: 0;
+}
+
+.adquiridos{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card-cursos-adquirido{
+  height: 90%;
+}
+
+/* .......................................................... */
+
+/*-------------------- FORMULARIO UNIVERSIDAD ------------------*/
+.form-eeau-page{
+  width: 100%;
+  height: 150vh;
+}
+
+.titulo-form{
+  font-size: 15px;
+  margin-top: 1%;
+}
+
+.folio-section{
+  justify-content: center;
+  margin-right: 0;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.form-container-eeau{
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  width: 95%;
+}
+
+.step-wizard-item{
+  min-width: 20%;
+}
+
+.step-wizard-item + .step-wizard-item::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  background: #300ab6;
+  width: 100%;
+  height: 2px;
+  transform: translateX(-50%);
+  z-index: -10;
+}
+
+.progress-label{
+  font-size: 15px;
+}
+
+.control-btns-steps{
+  gap: 10%;
+}
+
+.contenedor-opcionesmultiples{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.contenedor-opcionesmultiples-two{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* .......................................................... */
+
+/*------------------------- SIDEBAR ------------------------*/
+
+.sidebar.active{
+  display: none;
+  transition: all 0.3s;
+}
+
+.sidebar{
+  width: 200px;
+  height: 100%;
+}
+
+.main-estudiante{
+  background: rgba(0, 0, 0, 0.300);
+  z-index: -10;
+  width: 100%;
+}
+
+.main-estudiante.active{
+  background: none;
+  z-index: -10;
+}
+
+.foto-perfil{
+  opacity: 0.5;
+}
+
+.foto-perfil.active{
+  opacity: 10;
+}
+
+/* .......................................................... */
+
+/*------------------------- DASHBOARD ------------------------*/
+
+.section_foto_nombre{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+}
+
+.section_info_1{
+  display: none;
+}
+
+.section_info_2{
+  display: none;
+}
+
+.charts-section{
+  width: 97%;
+  margin-top: 13%;
+}
+
+.charts{
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 12px;
+  margin-left: -5%;
+}
+.grafica2{
+  margin-left: 35px;
+}
+
+/* .......................................................... */
+
+/*-------------------------- MI PERFIL ---------------------*/
+
+.container-sidebar.active{
+  display: none;
+}
+
+.section-info{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 97%;
+}
+.title-datos-personales.mi_perfil{
+  text-align: center;
+}
+.section_info_1.mi_perfil{
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 68%; /* Posición vertical en el medio */
+  left: 50%; /* Posición horizontal en el medio */
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+}
+.section_info_2.mi_perfil{
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+}
+.apartado.mi_perfil{
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section_info_1.miperfil{
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 230px; /* Posición vertical en el medio */
+  left: 50%; /* Posición horizontal en el medio */
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+}
+.section-btn-editar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 580px;
+}
+.btn-editar-datos{
+  margin-bottom: 30px;
+}
+
+.main-estudiante{
+  background: rgba(0, 0, 0, 0.300);
+  z-index: -10;
+  width: 100%;
+  height: 1125px;
+}
+
+
+/* ......................................................... */
+}

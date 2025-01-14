@@ -1,0 +1,1 @@
+export const TOKEN_SECRETO = "MQerk-Academy-2024";
