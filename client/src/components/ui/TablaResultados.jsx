@@ -136,7 +136,7 @@ export default function ColumnGroupingTable() {
                 <TableCell sx={{textAlign: 'center', color: 'blue'}}>
                     {TotalPuntos}
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: value==='Aceptado' ? 'green': value==='Rechazado' ? 'red': 'inherit'}} >
+                <TableCell sx={{textAlign: 'center', color: resultado==='Aceptado' ? 'green': resultado==='Rechazado' ? 'red': 'inherit'}} >
                     {resultado}
                 </TableCell>
             </TableRow>
