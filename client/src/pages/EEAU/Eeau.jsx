@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import TopBar from "../../components/TopBar";
+import TopBar from "../../components/TopBarColab.jsx";
 import SideBar from "../../components/SideBar";
 import { useEeau } from "../../context/EeauContext";
 import { useAuth } from "../../context/AuthContext";

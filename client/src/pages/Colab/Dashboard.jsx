@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import TopBar from "../../components/TopBarAdmin";
-import SidebarAdmin from "../../components/SideBarAdmin";
+import Sidebar from "../../components/SideBarColab";
 
 function DashColab() {
 
@@ -14,10 +14,10 @@ function DashColab() {
     <div>
         <TopBar toggleSidebar={toggleSidebar} />
         <div className="sidebarAdmin">
-            <SidebarAdmin isActive={active} />
+            <Sidebar isActive={active} />
         </div>
     </div>
   )
 }
 
-export default DashColab
+export default DashColab;

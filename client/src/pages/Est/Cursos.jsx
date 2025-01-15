@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import TopBar from "../../components/TopBar";
+import TopBar from "../../components/TopBarColab";
 import Universidad from "./../../assets/Entrenamiento_fondo.png";
 import Preparatoria from "./../../assets/entrenamiento2.png";
 import English from "./../../assets/english.png";

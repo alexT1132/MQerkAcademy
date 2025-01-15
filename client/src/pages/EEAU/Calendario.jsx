@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TopBar from "../../components/TopBar";
+import TopBar from "../../components/TopBarColab";
 import SideBar from "../../components/SideBar";
 import CalendarioEventos from "../../components/ui/CalendarEeau";
 import { FaPlus } from "react-icons/fa6";

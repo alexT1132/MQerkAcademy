@@ -4,7 +4,7 @@ import Avatar from "./ui/AvatarAdmin";
 import { Link } from "react-router-dom";
 import { IoMicOutline } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
-import Noti from "../components/ui/Notification";
+import Noti from "./ui/Notification";
 
 function TopBar({toggleSidebar}) {
   return (
@@ -18,7 +18,6 @@ function TopBar({toggleSidebar}) {
             <img className="logo-Topbar" src={Logo} />
         </div>
         <div className="barra-nav">
-
           <div className="section-barra">
             <div className="section-icono">
               <CiSearch className="icono-top" />
@@ -30,7 +29,6 @@ function TopBar({toggleSidebar}) {
               <IoMicOutline className="icono-top" />
             </div>
           </div>
-
         </div>
         <div>
           <Noti />
