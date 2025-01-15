@@ -56,7 +56,7 @@ function Register() {
             <div className="card-registro-colab">
                 <br />
                 <div className="titulo-registro-card">
-                    <h1 className="titulo-registro-card">CREA TU USUARIO</h1>
+                    <h1 className="titulo-registro-card">Registro de usuario</h1>
                 </div>
                 <br />
                 <form onSubmit={handleSubmit}>
@@ -66,6 +66,7 @@ function Register() {
                                 <FaUser className="icon-registro" />
                             </div>
                             <input 
+                            autoComplete='off'
                             type="text" 
                             className='input-registro' 
                             name="usuario" 
@@ -80,7 +81,7 @@ function Register() {
                             type="text" 
                             className='input-registro' 
                             name="contraseña" 
-                            placeholder="Crea tu usuario" 
+                            placeholder="Crea tu contraseña" 
                             />
                         </div>
                         <div className="footer-registro">

@@ -978,6 +978,25 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">Test de Inteligencia Emocional Bar-On </h1>
                         <br />
+                        <div className='contenedor-puntos'>
+                            <Grid container spacing={2} sx={{width: '95%'}}>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>0 = Totalmente en desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>1 = En desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>2 = Neutral</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>3 = De acuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>4 = Totalmente de acuerdo</p>
+                                </Grid>
+                            </Grid>
+                        </div>
                     </>
                 )}
                 {step === 14 && (
@@ -985,6 +1004,25 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">Test de Inteligencia Emocional Bar-On </h1>
                         <br />
+                        <div className='contenedor-puntos'>
+                            <Grid container spacing={2} sx={{width: '95%'}}>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>0 = Totalmente en desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>1 = En desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>2 = Neutral</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>3 = De acuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>4 = Totalmente de acuerdo</p>
+                                </Grid>
+                            </Grid>
+                        </div>
                     </>
                 )}
                 {step === 15 && (
@@ -992,6 +1030,25 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">Test de Inteligencia Emocional Bar-On </h1>
                         <br />
+                        <div className='contenedor-puntos'>
+                            <Grid container spacing={2} sx={{width: '95%'}}>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>0 = Totalmente en desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>1 = En desacuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>2 = Neutral</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>3 = De acuerdo</p>
+                                </Grid>
+                                <Grid item xs={2.4}>
+                                    <p className='puntos-prueba'>4 = Totalmente de acuerdo</p>
+                                </Grid>
+                            </Grid>
+                        </div>
                     </>
                 )}
                 {step === 16 && (
@@ -1044,6 +1101,7 @@ function Prueba() {
                 {step === 21 && (
                     <>
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <h1 className="titulo-form-colab primero">INDICACIÓN: En los siguientes ejercicios,
                                             selecciona el inciso de la figura que pertenece a la
                                             imagen.</h1>
@@ -1056,7 +1114,8 @@ function Prueba() {
                 {step === 22 && (
                     <>
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
+                        <h1 className="titulo-form-colab primero">Selecciona el inciso de la figura que pertenece a la imagen.</h1>
                         <br />
                         <div className='timerIn'>
                             <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
@@ -1066,7 +1125,8 @@ function Prueba() {
                 {step === 23 && (
                     <>
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
+                        <h1 className="titulo-form-colab primero">Seleccione el recuadro que mejor complete la secuencia.</h1>
                         <br />
                         <div className='timerIn'>
                             <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
@@ -1125,6 +1185,27 @@ function Prueba() {
                         <div className='timerIn'>
                             <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
                         </div>
+                    </>
+                )}
+                {step === 27 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                    </>
+                )}
+                {step === 28 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                    </>
+                )}
+                {step === 29 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
                     </>
                 )}
 
@@ -1833,7 +1914,8 @@ function Prueba() {
                         </div>
                         <br />
                         <div className="control-btns-steps-one testing">
-                            <button type="submit" className="btn-next-step-testing">Siguiente</button>
+                            {/* <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button> */}
+                            <button type="submit" className="btn-next welcome-colab">Siguiente</button>
                         </div>
                     </form>
                     )}
@@ -2427,7 +2509,8 @@ function Prueba() {
                         </div>
                         <br />
                         <div className="control-btns-steps-one testing">
-                            <button type="submit" className="btn-next-step-testing">Siguiente</button>
+                            {/* <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button> */}
+                            <button type="submit" className="btn-next welcome-colab">Siguiente</button>
                         </div>
                     </form>
                     )}
@@ -3623,7 +3706,8 @@ function Prueba() {
                         </div>
                         <br />
                         <div className="control-btns-steps-one testing">
-                            <button type="submit" className="btn-next-step-testing">Siguiente</button>
+                            {/* <button type="button" className="btn-next welcome-colab" onClick={prevStep}>Anterior</button> */}
+                            <button type="submit" className="btn-next welcome-colab">Siguiente</button>
                         </div>
                     </form>
                     )}
@@ -4310,7 +4394,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>10. Propón una actividad dinámica para enseñar un concepto complejo.</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             name="Wais10"
                                             value={Wais10}
                                             onChange={handleInputChange}
@@ -4363,6 +4448,7 @@ function Prueba() {
                                     <Grid item xs={4}>
                                         <TextField 
                                             value={Wais12}
+                                            autoComplete='off'
                                             onChange={handleInputChange2}
                                             id="outlined-basic" 
                                             label="Escribe aqui tu respuesta:" 
@@ -4374,7 +4460,9 @@ function Prueba() {
                                         <p className='pregunta-prueba'>13. ¿Cómo explicarías la importancia de tu materia?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
+                                            name="Wais13"
                                             value={Wais13}
                                             onChange={handleInputChange3}
                                             id="outlined-basic" 
@@ -4409,6 +4497,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             label="Escribe aqui tu respuesta:" 
                                             value={Wais15}
@@ -4438,6 +4527,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             value={Wais16}
                                             onChange={(e) => setWais16(e.target.value)}
@@ -4472,7 +4562,9 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
-                                            id="outlined-basic"
+                                            autoComplete='off'
+                                            id="outlined-basic" 
+                                            name="Wais18"
                                             value={Wais18}
                                             onChange={(e) => setWais18(e.target.value)}
                                             label="Escribe aqui tu respuesta:" 
@@ -4506,6 +4598,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             value={Wais20}
                                             onChange={(e) => setWais20(e.target.value)}
@@ -4524,6 +4617,8 @@ function Prueba() {
                         </div>
                     </form>
                     )}
+
+                    {/* Las imagenes de las respuestas se ven pequeñas en vista de celular */}
                     {step === 21 && (
                         <form 
                         className='container-steps'
@@ -4923,6 +5018,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             value={Academica2}
                                             onChange={(e) => setAcademica2(e.target.value)}
@@ -4957,6 +5053,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica4"
                                             value={Academica4}
@@ -5007,6 +5104,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                        autoComplete='off'
                                             id="outlined-basic" 
                                             value={Academica6}
                                             onChange={(e) => setAcademica6(e.target.value)}
@@ -5062,6 +5160,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             value={Academica9}
                                             onChange={(e) => setAcademica9(e.target.value)}
@@ -5111,7 +5210,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>11. ¿Qué herramientas tecnológicas usarías para asesorar?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica11"
                                             value={Academica11}
@@ -5146,7 +5246,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>13. ¿Cómo equilibrarías la disciplina y la motivación?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica13"
                                             value={Academica13}
@@ -5181,7 +5282,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>15. ¿Qué importancia tiene la empatía en el rol de asesor?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica15"
                                             value={Academica15}
@@ -5232,7 +5334,8 @@ function Prueba() {
                                         <p className='pregunta-prueba'>17. ¿Qué harías si un estudiante rechaza tu ayuda constantemente?</p>
                                     </Grid>
                                     <Grid item xs={4}>
-                                        <TextField 
+                                        <TextField
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica17"
                                             value={Academica17}
@@ -5268,6 +5371,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic"
                                             name="Academica19"
                                             value={Academica19}
@@ -5282,6 +5386,7 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
+                                            autoComplete='off'
                                             id="outlined-basic" 
                                             name="Academica20"
                                             value={Academica20}

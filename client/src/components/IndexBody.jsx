@@ -40,4 +40,4 @@ function NavIndex() {
   )
 }
 
-export default NavIndex
+export default NavIndex;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TopBar from "../../components/TopBar";
+import TopBar from "../../components/TopBarColab";
 import SideBar from "../../components/SideBar";
 import { FaCcMastercard, FaMoneyBillAlt } from "react-icons/fa";
 import { GoArrowSwitch } from "react-icons/go";

@@ -524,7 +524,7 @@
 }
 
 .section-input{
-  width: 100%;
+  width: 120%;
   max-height: 100%;
 }
 
@@ -709,7 +709,7 @@
 
 .sidebar{
   width: 250px;
-  height: 87.5vh;
+  height: 150%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -777,6 +777,7 @@
 
 .sidebar.active{
   width: 92px;
+  height: 150%;
 }
 
 .sidebar.active .arrow{

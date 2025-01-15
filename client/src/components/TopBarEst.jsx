@@ -18,7 +18,6 @@ function TopBar({toggleSidebar}) {
             <img className="logo-Topbar" src={Logo} />
         </div>
         <div className="barra-nav">
-
           <div className="section-barra">
             <div className="section-icono">
               <CiSearch className="icono-top" />
@@ -30,7 +29,6 @@ function TopBar({toggleSidebar}) {
               <IoMicOutline className="icono-top" />
             </div>
           </div>
-
         </div>
         <div>
           <Noti />
