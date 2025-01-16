@@ -12,6 +12,8 @@ function Resultados() {
   const location = useLocation();
   const {previo} = location.state || {};
 
+  console.log(previo);
+
   return (
     <div>
         <NavLogin />
@@ -29,7 +31,7 @@ function Resultados() {
         <br />
         {
           val ? <div className='section-iniciar-tramite'>
-                  <button className='btn-iniciar-tramite'>Iniciar tramite</button>
+                  <button onClick={() => navigate('/colab-info-pers', { state: {previo} })} className='btn-iniciar-tramite'>Iniciar tramite</button>
                 </div> 
                 : 
                 <div className='section-iniciar-tramite'>

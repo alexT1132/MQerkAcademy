@@ -4,7 +4,7 @@
 import NavLogin from "../../../components/NavLogin";
 import { Municipios, Nacionalidad} from "./const.js";
 import React, {useState} from 'react';
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';                    // Componentes importados
 import { LocalizationProvider } from '@mui/x-date-pickers';    // para el date picker
@@ -14,32 +14,18 @@ import {InputLabel, Select} from '@mui/material';      //Nuevo componente para l
 import { Typography, TextField, FormControlLabel, FormControl, FormLabel, Radio, RadioGroup, Box } from "@mui/material";
 
 
+
 function InfoPer(){
+
+  const location = useLocation();
+  const {previo} = location.state || {};
+
 const [dir, setDir] = useState('');
 const [mun, setMun] = useState('');
 const [nac, setNac] = useState('');
 const [nacion, setNacion] = useState('');
 const [gen, setGen] = useState('');
 const [rfc, setRfc] = useState('');
-
-const navigate = useNavigate();
-
-const handleSubmit = (event) => {
-event.preventDefault();
-
-        const previo = {
-            dir,
-            mun,
-            nac,
-            nacion,
-            gen,
-            rfc
-        }
-
-        navigate('/colab-info-pers', { state: previo });
-
-}
-
     
     function RFCInput() {
     const [value, setValue] = useState('');
@@ -73,7 +59,7 @@ event.preventDefault();
             <NavLogin/>
             
             <div>
-                <h1 className="encabezado-reg">Bienvenid@: Nombre de usuario </h1>      {/*Falta agregar la constante del usuario*/}
+                <h1 className="encabezado-reg">Bienvenid@ {previo.nombres} {previo.apellidos} </h1>      {/*Falta agregar la constante del usuario*/}
             
 
 
@@ -84,7 +70,6 @@ event.preventDefault();
                 </p>
             
 
-            <br/>
 
             
                 <h1 className="instrucciones-reg">1. Información personal</h1>
@@ -98,51 +83,9 @@ event.preventDefault();
                 
             </div>
 
-            {/* 
-
-
-                <Autocomplete
-                    disablePortal
-                    options={Municipios}
-                    renderInput={(params) => <TextField {...params} label="Municipio" />}
-                    noOptionsText='Opción inválida'
-                    autoSelect
-                    />
-
-
-                <Autocomplete
-                    disablePortal
-                    options={Nacionalidad}
-                    renderInput={(params) => <TextField {...params} label="Nacionalidad" />}
-                    />
-
-
-                <Box>
-                <TextField  required                    //Añadir paramentros
-                            label="RFC"
-                            variant="outlined"
-                            value={value}
-                            onChange={handleChange}
-                            error={error}
-                            helperText={error ? 'Ingresa un RFC válido' : ''}
-                            fullWidth
-                            id="outlined-basic"
-                            
-                            />
-                {!error && value && (
-                <Typography color="green" style={{ marginTop: '10px' }}>
-                RFC válido
-                </Typography>
-      )}
-                </Box>
-                </Box>
-
-            <br />
-
-                <button className="btn-cont-reg">Siguiente</button>
-            </Box>*/}
+            
             <div className="form-index-colab">
-            <form className='form-campos-colab' onSubmit={handleSubmit}>
+            <form className='form-campos-colab'>
 
                 {/* Direccion */}
                 <div className='campos-card-index-colab'>
@@ -178,6 +121,7 @@ event.preventDefault();
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker
                 format="DD - MM - YYYY"
+                sx={{width: '90%'}} 
                 timezone="system"
                 label="Fecha de nacimiento"
                 onChange={(e)=>setNac(e.target.value)}

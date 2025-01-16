@@ -1149,23 +1149,23 @@ function Prueba() {
                 )}
                 {step === 26 && (
                     <>
-                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
-                        <br />
-                        <div className='timerIn'>
-                            <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
-                        </div>
-                    </>
+                    <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                    <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                    <br />
+                    <div className='timerIn'>
+                        <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
+                    </div>
+                </>
                 )}
                 {step === 27 && (
-                    <>
-                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
-                        <br />
-                        <div className='timerIn'>
-                            <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
-                        </div>
-                    </>
+                     <>
+                     <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                     <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                     <br />
+                     <div className='timerIn'>
+                         <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
+                     </div>
+                 </>
                 )}
                 {step === 28 && (
                     <>
@@ -1185,27 +1185,6 @@ function Prueba() {
                         <div className='timerIn'>
                             <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
                         </div>
-                    </>
-                )}
-                {step === 27 && (
-                    <>
-                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
-                        <br />
-                    </>
-                )}
-                {step === 28 && (
-                    <>
-                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
-                        <br />
-                    </>
-                )}
-                {step === 29 && (
-                    <>
-                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
-                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
-                        <br />
                     </>
                 )}
 

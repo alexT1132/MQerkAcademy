@@ -31,15 +31,41 @@ export default function ColumnGroupingTable() {
 
   const TotalPuntos = resultBigfive + resultDass + resultZavic + resultBoron + ResultWais + ResultAcademica;
 
-  console.log(DataZavic);
+  const aceptacionBigFive = (
+    resultBigfive > 65 
+  ) ? "Aceptado" : "Rechazado";
+
+  const aceptacionDass = (
+    resultDass <= 50 
+  ) ? "Aceptado" : "Rechazado";
+
+  const aceptacionZavic = (
+    resultZavic <= 110 
+  ) ? "Aceptado" : "Rechazado";
+
+  const aceptacionBARON = (
+    resultBoron >= 90 && 
+    resultBoron <= 120
+  ) ? "Aceptado" : "Rechazado";
+
+  const aceptacionWais = (
+    ResultWais >= 150 
+  ) ? "Aceptado" : "Rechazado";
+
+  const aceptacionAcademica = (
+    ResultAcademica >= 150 &&
+    ResultAcademica <= 200 
+  ) ? "Aceptado" : "Rechazado";
 
 const aceptacion = (
     resultBigfive > 65 &&
-    resultDass < 14 &&
+    resultDass <= 50 &&
     resultZavic <= 110 &&
-    resultBoron < 120 &&
+    resultBoron >= 90 && 
+    resultBoron <= 120 &&
     ResultWais >= 150 &&
-    ResultAcademica <= 150
+    ResultAcademica >= 150 &&
+    ResultAcademica <= 200 
   ) ? "Aceptado" : "Rechazado";
 
   Definicion(aceptacion);
@@ -66,7 +92,7 @@ const aceptacion = (
                 <TableCell sx={{textAlign: 'center'}}>
                     Test de personalidad
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: 'blue'}}>
+                <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacionBigFive === 'Aceptado' ? 'green' : aceptacionBigFive === 'Rechazado' ? 'red' : 'inherit'}}>
                     {resultBigfive}
                 </TableCell>
                 <TableCell sx={{textAlign: 'center'}} >
@@ -77,7 +103,7 @@ const aceptacion = (
                 <TableCell sx={{textAlign: 'center'}}>
                     Test DASS-21
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: 'blue'}}>
+                <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacionDass === 'Aceptado' ? 'green' : aceptacionDass === 'Rechazado' ? 'red' : 'inherit'}}>
                     {resultDass}
                 </TableCell>
                 <TableCell sx={{textAlign: 'center'}} >
@@ -88,7 +114,7 @@ const aceptacion = (
                 <TableCell sx={{textAlign: 'center'}}>
                     Test de zavic
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: 'blue'}}>
+                <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacionZavic === 'Aceptado' ? 'green' : aceptacionZavic === 'Rechazado' ? 'red' : 'inherit'}}>
                     {resultZavic}
                 </TableCell>
                 <TableCell sx={{textAlign: 'center'}} >
@@ -99,7 +125,7 @@ const aceptacion = (
                 <TableCell sx={{textAlign: 'center'}}>
                     Test de Inteligencia emocional
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: 'blue'}}>
+                <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacionBARON === 'Aceptado' ? 'green' : aceptacionBARON === 'Rechazado' ? 'red' : 'inherit'}}>
                     {resultBoron}
                 </TableCell>
                 <TableCell sx={{textAlign: 'center'}} >
@@ -110,7 +136,7 @@ const aceptacion = (
                 <TableCell sx={{textAlign: 'center'}}>
                     Test de WAIS
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: 'blue'}}>
+                <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacionWais === 'Aceptado' ? 'green' : aceptacionWais === 'Rechazado' ? 'red' : 'inherit'}}>
                     {ResultWais}
                 </TableCell>
                 <TableCell sx={{textAlign: 'center'}} >
@@ -121,7 +147,7 @@ const aceptacion = (
                 <TableCell sx={{textAlign: 'center'}}>
                     Prueba académica
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: 'blue'}}>
+                <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacionAcademica === 'Aceptado' ? 'green' : aceptacionAcademica === 'Rechazado' ? 'red' : 'inherit'}}>
                     {ResultAcademica}
                 </TableCell>
                 <TableCell sx={{textAlign: 'center'}} >
@@ -132,7 +158,7 @@ const aceptacion = (
                 <TableCell sx={{textAlign: 'center'}}>
                     Total de puntos
                 </TableCell>
-                <TableCell sx={{textAlign: 'center', color: 'blue'}}>
+                <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacion === 'Aceptado' ? 'green' : aceptacion === 'Rechazado' ? 'red' : 'inherit'}}>
                     {TotalPuntos}
                 </TableCell>
                 <TableCell sx={{textAlign: 'center', fontWeight: 600, color: aceptacion === 'Aceptado' ? 'green' : aceptacion === 'Rechazado' ? 'red' : 'inherit'}} >
