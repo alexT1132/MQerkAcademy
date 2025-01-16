@@ -428,7 +428,32 @@ function Prueba() {
          const [Wais18, setWais18] = useState('');
          const [Wais19, setWais19] = useState('');
          const [Wais20, setWais20] = useState('');
+         const [Wais21, setWais21] = useState([]);
+         const [Wais22, setWais22] = useState([]);
+         const [Wais23, setWais23] = useState([]);
+         const [Wais24, setWais24] = useState([]);
+         const [Wais25, setWais25] = useState([]);
          const [ResultWais, setResultWais] = useState(0);
+
+         const handleRadioChange21 = (e) => {
+            setWais21(e.target.value);
+          };
+
+          const handleRadioChange22 = (e) => {
+            setWais22(e.target.value);
+          };
+
+          const handleRadioChange23 = (e) => {
+            setWais23(e.target.value);
+          };
+
+          const handleRadioChange24 = (e) => {
+            setWais24(e.target.value);
+          };
+
+          const handleRadioChange25 = (e) => {
+            setWais25(e.target.value);
+          };
 
          useEffect(() => {
             let temResultWais = 0;
@@ -513,11 +538,28 @@ function Prueba() {
                 temResultWais = temResultWais + 10;
             }
 
+            if (Wais21 === 'd') {
+                temResultWais = temResultWais + 10;
+            }
+
+            if (Wais22 === 'd') {
+                temResultWais = temResultWais + 10;
+            }
+
+            if (Wais23 === 'c') {
+                temResultWais = temResultWais + 10;
+            }
+
+            if (Wais24 === 'c') {
+                temResultWais = temResultWais + 10;
+            }
+
+            if (Wais25 === 'c') {
+                temResultWais = temResultWais + 10;
+            }
 
             setResultWais(temResultWais);
          });
-
-         console.log(ResultWais);
  
          // WAIS state Final
 
@@ -543,6 +585,94 @@ function Prueba() {
          const [Academica18, setAcademica18] = useState('');
          const [Academica19, setAcademica19] = useState('');
          const [Academica20, setAcademica20] = useState('');
+         const [ResultAcademica, setResultAcademica] = useState(0);
+
+         useEffect(() => {
+            let temResultAcademica = 0;
+
+            if (Academica1 === 'Escuchar activamente al estudiante') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica2) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica3 === 'Proporcionarle recursos adicionales, como ejercicios prácticos') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica4) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica5 === 'Investigar las causas subyacentes y buscar soluciones con él') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica6) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica7 === 'Empático') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica8 === 'Observar su desempeño general y recopilar retroalimentación') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica9) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica10 === 'Escuchar con empatía y referirlo a un profesional si es necesario') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica11) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica12 === 'Ser constructivo y destacar áreas de mejora junto con logros') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica13) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica14 === 'Hablar con él en privado para entender la causa del comportamiento') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica15) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica16 === 'Priorizar casos según su urgencia y delegar tareas si es necesario') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica17) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica18 === 'Ayudar a los estudiantes a alcanzar su máximo potencial académico y personal') {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica19) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            if (Academica20) {
+                temResultAcademica = temResultAcademica + 10;
+            }
+
+            setResultAcademica(temResultAcademica);
+
+         })
  
          // Academica state Final
 
@@ -551,6 +681,80 @@ function Prueba() {
     const [hasAlertShow1, setHasAlertshow1] = useState(false); 
     const [hasAlertShow2, setHasAlertshow2] = useState(false); 
     const [hasAlertShow3, setHasAlertshow3] = useState(false); 
+
+    // Temporizador 1
+  const [timeLeft, setTimeLeft] = useState(40 * 60); // 40 minutos en segundos
+  const [isRunning, setIsRunning] = useState(false);
+
+  useEffect(() => {
+    // Inicia el temporizador cuando step sea 17
+    if (step === 17) {
+      setIsRunning(true);
+    }
+
+    // Detiene el temporizador cuando step sea 24
+    if (step === 24) {
+      setIsRunning(false);
+    }
+  }, [step]);
+
+  useEffect(() => {
+    let timer;
+    if (isRunning && timeLeft > 0) {
+      timer = setInterval(() => {
+        setTimeLeft((prevTime) => prevTime - 1);
+      }, 1000);
+    } else if (timeLeft === 0){
+        setIsRunning(false);
+        setStep(24);
+    }
+
+    // Limpia el intervalo si el temporizador se detiene o se agota el tiempo
+    return () => clearInterval(timer);
+  }, [isRunning, timeLeft]);
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
+
+      // Temporizador 2
+    const [timeLeft2, setTimeLeft2] = useState(45 * 60); // 40 minutos en segundos
+    const [isRunning2, setIsRunning2] = useState(false);
+
+    useEffect(() => {
+        // Inicia el temporizador cuando step sea 17
+        if (step === 26) {
+          setIsRunning2(true);
+        }
+    
+        // Detiene el temporizador cuando step sea 24
+        if (step === 29) {
+          setIsRunning2(false);
+        }
+      }, [step]);
+
+      useEffect(() => {
+        let timer2;
+        if (isRunning2 && timeLeft2 > 0) {
+          timer2 = setInterval(() => {
+            setTimeLeft2((prevTime) => prevTime - 1);
+          }, 1000);
+        } else if (timeLeft2 === 0){
+            setIsRunning2(false);
+            onsubmit();
+        }
+    
+        // Limpia el intervalo si el temporizador se detiene o se agota el tiempo
+        return () => clearInterval(timer2);
+      }, [isRunning2, timeLeft2]);
+
+      const formatTime2 = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+      };
 
 
     const nextStep = () => {
@@ -599,7 +803,7 @@ function Prueba() {
         });
 
         const onSubmit = () => {
-            navigate('/resultados-colab', { state: {previo, DataBigFive, DataDass, DataZavic, DataBaron} });
+            navigate('/resultados-colab', { state: {previo, DataBigFive, DataDass, DataZavic, DataBaron, ResultWais, ResultAcademica} });
         };
       
 
@@ -859,6 +1063,9 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 18 && (
@@ -866,6 +1073,9 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 19 && (
@@ -873,6 +1083,9 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 20 && (
@@ -880,6 +1093,9 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 21 && (
@@ -890,6 +1106,9 @@ function Prueba() {
                                             selecciona el inciso de la figura que pertenece a la
                                             imagen.</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 22 && (
@@ -898,6 +1117,9 @@ function Prueba() {
                         <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <h1 className="titulo-form-colab primero">Selecciona el inciso de la figura que pertenece a la imagen.</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 23 && (
@@ -906,6 +1128,9 @@ function Prueba() {
                         <h1 className='titulo-form-colab primero'>TEST de Inteligencia Cognitiva Completa (IQ Test de Alto Nivel)-WAIS:</h1>
                         <h1 className="titulo-form-colab primero">Seleccione el recuadro que mejor complete la secuencia.</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime(timeLeft)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 24 && (
@@ -927,6 +1152,39 @@ function Prueba() {
                         <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
                         <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
                         <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
+                        </div>
+                    </>
+                )}
+                {step === 27 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
+                        </div>
+                    </>
+                )}
+                {step === 28 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
+                        </div>
+                    </>
+                )}
+                {step === 29 && (
+                    <>
+                        <h1 className="titulo-form-colab primero">{previo.nombres} {previo.apellidos}</h1>
+                        <h1 className="titulo-form-colab primero">PRUEBA ACADÉMICA</h1>
+                        <br />
+                        <div className='timerIn'>
+                            <h2 className='temporizador' >{formatTime2(timeLeft2)}</h2>
+                        </div>
                     </>
                 )}
                 {step === 27 && (
@@ -3289,21 +3547,6 @@ function Prueba() {
                         <div className="container-steps">
                             <Box sx={{ flexGrow: 1, marginLeft: 1, marginRight: 1 }}>
                                 <Grid container spacing={2}>
-                                    {/* <Grid item xs={2.4} textAlign='center'>
-                                        <p>4 = Muy de acuerdo</p>
-                                    </Grid>
-                                    <Grid item xs={2.4} textAlign='center'>
-                                        <p>3 = De acuerdo</p>
-                                    </Grid>
-                                    <Grid item xs={2.4} textAlign='center'>
-                                        <p>2 = Moderado</p>
-                                    </Grid>
-                                    <Grid item xs={2.4} textAlign='center'>
-                                        <p>1 = En desacuerdo</p>
-                                    </Grid>
-                                    <Grid item xs={2.4} textAlign='center'>
-                                        <p>0 = Muy en desacuerdo</p>
-                                    </Grid> */}
                                     <Grid item xs={10}>
                                         <p className='pregunta-prueba'>1. Soy capaz de reconocer cuando mis emociones afectan mi desempeño en el trabajo.</p>
                                     </Grid>
@@ -4204,8 +4447,8 @@ function Prueba() {
                                     </Grid>
                                     <Grid item xs={4}>
                                         <TextField 
-                                            name="Wais12"
                                             value={Wais12}
+                                            autoComplete='off'
                                             onChange={handleInputChange2}
                                             id="outlined-basic" 
                                             label="Escribe aqui tu respuesta:" 
@@ -4257,7 +4500,6 @@ function Prueba() {
                                             autoComplete='off'
                                             id="outlined-basic" 
                                             label="Escribe aqui tu respuesta:" 
-                                            name="Wais15"
                                             value={Wais15}
                                             onChange={handleInputChange4}
                                             variant="outlined" 
@@ -4287,7 +4529,6 @@ function Prueba() {
                                         <TextField 
                                             autoComplete='off'
                                             id="outlined-basic" 
-                                            name="Wais16"
                                             value={Wais16}
                                             onChange={(e) => setWais16(e.target.value)}
                                             label="Escribe aqui tu respuesta:" 
@@ -4359,7 +4600,6 @@ function Prueba() {
                                         <TextField 
                                             autoComplete='off'
                                             id="outlined-basic" 
-                                            name="Wais20"
                                             value={Wais20}
                                             onChange={(e) => setWais20(e.target.value)}
                                             label="Escribe aqui tu respuesta:" 
@@ -4391,16 +4631,15 @@ function Prueba() {
                                         <img src={ImgPlan1} className='img-test-wais'/>
                                     </Grid>
                                     <Grid item xs={6} style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}} >
-                                    <FormControl
-                                            className='frame-resp'>                            
-                                            <RadioGroup
-                                                
+                                    <FormControl className='frame-resp'>                            
+                                            <RadioGroup value={Wais21} onChange={handleRadioChange21}
                                                 aria-labelledby="radio-buttons-group-label"
                                                 name="radio-buttons-group"
                                             >
                                             
-                                            <FormControlLabel
-                                            value="R1" control={<Radio />}
+                                            <FormControlLabel 
+                                            value='a'
+                                            control={<Radio />}
                                             label={
                                                 <img
                                                 className='center-resp-form'
@@ -4408,29 +4647,41 @@ function Prueba() {
                                                 alt='Respuesta 1'>
                                                 </img>
                                             } />
-                                            <FormControlLabel value="R2" control={<Radio />}
+                                            <FormControlLabel 
+                                            value='b'
+                                            control={<Radio 
+                                                
+                                                />}
                                                 label={
                                                 <img className='center-resp-form'
                                                 src={P1R2}
                                                 alt='Respuesta 2'>
                                                 </img>} />
 
-                                            <FormControlLabel value="R3" control={<Radio />}
+                                            <FormControlLabel 
+                                            value='c'
+                                                control={<Radio
+                                                
+                                                    />}
                                                 label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P1R3}
                                                 alt='Respuesta 3'>
                                                 </img>} />
-                                            <FormControlLabel value="R4" control={<Radio />}
+                                            <FormControlLabel 
+                                            value='d'
+                                            control={<Radio 
+                                                
+                                                />}
                                                 label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P1R4}
-                                                alt='Respuesta 4'>
+                                                >
                                                 </img>} />
                                             </RadioGroup>
-                                            </FormControl>
+                                        </FormControl>
                                     </Grid>
                                     
                                 </Grid>
@@ -4446,35 +4697,42 @@ function Prueba() {
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
-                                                
+                                                value={Wais22} onChange={handleRadioChange22}
                                                 aria-labelledby="radio-buttons-group-label"
                                                 name="radio-buttons-group"
                                             >
                                             
                                             <FormControlLabel
-                                            value="R1" control={<Radio />}
+                                            value='a'
+                                            control={<Radio />}
                                             label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P2R1}
-                                                alt='Respuesta 1'>
+                                                >
                                                 </img>
                                             } />
-                                            <FormControlLabel value="R2" control={<Radio />}
+                                            <FormControlLabel 
+                                                control={<Radio />}
+                                                value='b'
                                                 label={
                                                 <img className='center-resp-form'
                                                 src={P2R2}
                                                 alt='Respuesta 2'>
                                                 </img>} />
 
-                                            <FormControlLabel value="R3" control={<Radio />}
+                                            <FormControlLabel 
+                                                control={<Radio />}
+                                                value='c'
                                                 label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P2R3}
                                                 alt='Respuesta 3'>
                                                 </img>} />
-                                            <FormControlLabel value="R4" control={<Radio />}
+                                            <FormControlLabel 
+                                                control={<Radio />}
+                                                value='d'
                                                 label={
                                                 <img
                                                 className='center-resp-form'
@@ -4497,7 +4755,6 @@ function Prueba() {
                         </div>
                     </form>
                     )}
-
                     {step === 22 && (
                         <form 
                         className='container-steps'
@@ -4513,35 +4770,42 @@ function Prueba() {
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
-                                                
+                                                value={Wais23} onChange={handleRadioChange23}
                                                 aria-labelledby="radio-buttons-group-label"
                                                 name="radio-buttons-group"
                                             >
                                             
                                             <FormControlLabel
-                                            value="R1" control={<Radio />}
+                                            control={<Radio />}
+                                            value='a'
                                             label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P3R1}
-                                                alt='Respuesta 1'>
+                                                >
                                                 </img>
                                             } />
-                                            <FormControlLabel value="R2" control={<Radio />}
+                                            <FormControlLabel 
+                                                control={<Radio />}
+                                                value='b'
                                                 label={
                                                 <img className='center-resp-form'
                                                 src={P3R2}
                                                 alt='Respuesta 2'>
                                                 </img>} />
 
-                                            <FormControlLabel value="R3" control={<Radio />}
+                                            <FormControlLabel 
+                                                control={<Radio />}
+                                                value='c'
                                                 label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P3R3}
                                                 alt='Respuesta 3'>
                                                 </img>} />
-                                            <FormControlLabel value="R4" control={<Radio />}
+                                            <FormControlLabel 
+                                                control={<Radio />}
+                                                value='d'
                                                 label={
                                                 <img
                                                 className='center-resp-form'
@@ -4565,13 +4829,14 @@ function Prueba() {
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
-                                                
+                                                value={Wais24} onChange={handleRadioChange24}
                                                 aria-labelledby="radio-buttons-group-label"
                                                 name="radio-buttons-group"
                                             >
                                             
                                             <FormControlLabel
-                                            value="R1" control={<Radio />}
+                                            control={<Radio />}
+                                            value='a'
                                             label={
                                                 <img
                                                 className='center-resp-form'
@@ -4579,21 +4844,21 @@ function Prueba() {
                                                 alt='Respuesta 1'>
                                                 </img>
                                             } />
-                                            <FormControlLabel value="R2" control={<Radio />}
+                                            <FormControlLabel value="b" control={<Radio />}
                                                 label={
                                                 <img className='center-resp-form'
                                                 src={P4R2}
                                                 alt='Respuesta 2'>
                                                 </img>} />
 
-                                            <FormControlLabel value="R3" control={<Radio />}
+                                            <FormControlLabel value="c" control={<Radio />}
                                                 label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P4R3}
                                                 alt='Respuesta 3'>
                                                 </img>} />
-                                            <FormControlLabel value="R4" control={<Radio />}
+                                            <FormControlLabel value="d" control={<Radio />}
                                                 label={
                                                 <img
                                                 className='center-resp-form'
@@ -4616,8 +4881,6 @@ function Prueba() {
                         </div>
                     </form>
                     )}
-
-
                     {step === 23 && (
                         <form 
                         className='container-steps'
@@ -4633,13 +4896,13 @@ function Prueba() {
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
-                                                
+                                                value={Wais25} onChange={handleRadioChange25}
                                                 aria-labelledby="radio-buttons-group-label"
                                                 name="radio-buttons-group"
                                             >
                                             
                                             <FormControlLabel
-                                            value="R1" control={<Radio />}
+                                            value="a" control={<Radio />}
                                             label={
                                                 <img
                                                 className='center-resp-form'
@@ -4647,21 +4910,21 @@ function Prueba() {
                                                 alt='Respuesta 1'>
                                                 </img>
                                             } />
-                                            <FormControlLabel value="R2" control={<Radio />}
+                                            <FormControlLabel value="b" control={<Radio />}
                                                 label={
                                                 <img className='center-resp-form'
                                                 src={P5R2}
                                                 alt='Respuesta 2'>
                                                 </img>} />
 
-                                            <FormControlLabel value="R3" control={<Radio />}
+                                            <FormControlLabel value="c" control={<Radio />}
                                                 label={
                                                 <img
                                                 className='center-resp-form'
                                                 src={P5R3}
                                                 alt='Respuesta 3'>
                                                 </img>} />
-                                            <FormControlLabel value="R4" control={<Radio />}
+                                            <FormControlLabel value="d" control={<Radio />}
                                                 label={
                                                 <img
                                                 className='center-resp-form'
@@ -4682,9 +4945,7 @@ function Prueba() {
                             <button type="submit" className="btn-next welcome-colab">Finalizar</button>
                         </div>
                     </form>
-                    )}
-
-                    
+                    )}                  
                     {step === 24 && (
                         <form onSubmit={nextStep}>
                             <div className="instricciones-test-wais">
@@ -4759,7 +5020,6 @@ function Prueba() {
                                         <TextField 
                                             autoComplete='off'
                                             id="outlined-basic" 
-                                            name="Academica2"
                                             value={Academica2}
                                             onChange={(e) => setAcademica2(e.target.value)}
                                             label="Escribe aqui tu respuesta:" 
@@ -4846,7 +5106,6 @@ function Prueba() {
                                         <TextField 
                                         autoComplete='off'
                                             id="outlined-basic" 
-                                            name="Academica6"
                                             value={Academica6}
                                             onChange={(e) => setAcademica6(e.target.value)}
                                             label="Escribe aqui tu respuesta:" 
@@ -4903,7 +5162,6 @@ function Prueba() {
                                         <TextField 
                                             autoComplete='off'
                                             id="outlined-basic" 
-                                            name="Academica9"
                                             value={Academica9}
                                             onChange={(e) => setAcademica9(e.target.value)}
                                             label="Escribe aqui tu respuesta:" 

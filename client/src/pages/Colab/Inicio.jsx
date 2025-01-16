@@ -48,7 +48,6 @@ function index() {
         <div className="form-index-colab">
           <form className='form-campos-colab' onSubmit={handleSubmit}>
               <div className='card-index-colab'>
-
                 <div className='campos-card-index-colab'>
                   <TextField 
                       id="outlined-basic" 
@@ -61,7 +60,6 @@ function index() {
                       required
                   />
                 </div>
-
                 <div className='campos-card-index-colab'>
                   <TextField 
                     id="outlined-basic" 
@@ -74,7 +72,6 @@ function index() {
                     required
                   />
                 </div>
-
                 <div className='campos-card-index-colab'>
                   <TextField 
                     id="outlined-basic" 
@@ -87,7 +84,6 @@ function index() {
                     required 
                   />
                 </div>
-
                 <div className='campos-card-index-colab'>
                   <TextField 
                     id="outlined-basic" 
@@ -100,7 +96,6 @@ function index() {
                     required
                   />
                 </div>
-
                 <div className='campos-card-index-colab'>
                   <FormControl fullWidth required sx={{width: '90%'}} >
                       <InputLabel id="demo-simple-select-label">Área de especialización:</InputLabel>
@@ -122,7 +117,6 @@ function index() {
                       </Select>
                   </FormControl>
                 </div>
-
                 <div className='campos-card-index-colab'>
                   <FormControl fullWidth required sx={{width: '90%'}} >
                       <InputLabel id="demo-simple-select-label">Grado de estudio:</InputLabel>
@@ -141,8 +135,7 @@ function index() {
                       </Select>
                   </FormControl>
                 </div>
-              
-
+              </div>
               <div className='campo-id-colab'>
                 <TextField 
                     id="outlined-basic" 
@@ -154,7 +147,6 @@ function index() {
                     value={identificador}
                     required
                 />
-              </div>
               </div>
               <button type='submit' className='footer-btn-index-colab'>Continuar</button>
           </form>

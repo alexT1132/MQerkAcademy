@@ -1,7 +1,7 @@
 import app from "./app.js";
 import { connectDB } from "./db.js";
 
-const Host = '192.168.1.6'
+const Host = '192.168.1.22'
 
 connectDB();
 app.listen(4000, Host);

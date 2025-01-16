@@ -1,10 +1,14 @@
 import React from 'react'
 import NavLogin from "../../components/NavLogin";
 import TablaResultados from "../../components/ui/TablaResultados";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useResult } from "../../context/ResultContext";
 
 function Resultados() {
 
+  const {val} = useResult();
+
+  const navigate = useNavigate();
   const location = useLocation();
   const {previo} = location.state || {};
 
@@ -23,9 +27,15 @@ function Resultados() {
           </div>
         </div>
         <br />
-        <div className='section-iniciar-tramite'>
-          <button className='btn-iniciar-tramite'>Iniciar tramite</button>
-        </div>
+        {
+          val ? <div className='section-iniciar-tramite'>
+                  <button className='btn-iniciar-tramite'>Iniciar tramite</button>
+                </div> 
+                : 
+                <div className='section-iniciar-tramite'>
+                  <button onClick={() => navigate('/')} className='btn-iniciar-tramite'>Finalizar</button>
+                </div>
+        }
     </div>
   )
 }
