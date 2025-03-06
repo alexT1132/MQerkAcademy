@@ -1,4 +1,4 @@
-//ruta: http://192.168.1.20:PORT/colab-info-pers
+//ruta: http://192.168.0.19:PORT/colab-info-pers
 //App.jsx line 49
 
 import NavLogin from "../../../components/NavLogin";
@@ -10,8 +10,8 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';                
 import { LocalizationProvider } from '@mui/x-date-pickers';    // para el date picker
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';                        // .
 
-import {InputLabel, Select, Grid, MenuItem, Autocomplete} from '@mui/material';      //Nuevo componente para listas
-import { Typography, TextField, FormControlLabel, FormControl, FormLabel, Radio, RadioGroup, Box } from "@mui/material";
+import { Typography, TextField, FormControlLabel, FormControl, FormLabel, Radio, RadioGroup, Autocomplete } from "@mui/material";
+
 
 function InfoPer(){
 const [dir, setDir] = useState('');
@@ -64,14 +64,18 @@ event.preventDefault();
 
     const {value, error, handleChange}=RFCInput();
     
+    
     return(
 
-
-        <Box>
+<html lang="es">
+  <head>
+    <meta charSet="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+        <body>
            
             <NavLogin/>
-            
-            <div>
+            <main>
                 <h1 className="encabezado-reg">Bienvenid@: Nombre de usuario </h1>      {/*Falta agregar la constante del usuario*/}
             
 
@@ -94,107 +98,93 @@ event.preventDefault();
                 Asegúrate de verificar la información antes de enviarla.
                 </p>
                 
-            </div>
+            <form
+            className="cent-form">
 
-            <div className="form-index-colab">
-          <form className='form-campos-colab' onSubmit={handleSubmit}>
-              <div className='card-index-colab'>
-                <div className='campos-card-index-colab'>
-                  <TextField 
-                      id="outlined-basic" 
-                      label="Dirección" 
-                      variant="outlined" 
-                      name='nombre'
-                      sx={{width: '90%'}} 
-                      required
+                {/* Direccion */}
+                  <TextField
+                    fullWidth
+                    label="Dirección:" 
+                    variant="outlined" 
+                    name='direccion' 
+                    onChange={(e) => setDir(e.target.value)} 
+                    value={dir}
+                    required
                   />
-                </div>
-                <div className='campos-card-index-colab'>
-                <Autocomplete
-                fullWidth
+
+                {/* Municipio */}
+                  <Autocomplete
                     disablePortal
                     options={Municipios}
                     renderInput={(params) => <TextField {...params} label="Municipio" />}
                     noOptionsText='Opción inválida'
+                    onChange={(e) => setMun(e.target.value)} 
                     autoSelect
                     />
-                </div>
-                <div className='campos-card-index-colab'>
-                  <TextField 
-                    id="outlined-basic" 
-                    label="Fecha de nacimiento" 
-                    variant="outlined" 
-                    name='email'
-                    sx={{width: '90%'}}
-                    required 
-                  />
-                </div>
+
+                {/* Fecha de nacimiento */}
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DatePicker
+                    format="DD - MM - YYYY"
+                    timezone="system"
+                    label="Fecha de nacimiento"
+                    onChange={(e) => setNac(e.target.value)} 
+                    required/>
+                  </LocalizationProvider>
 
                 {/* Nacionalidad */}
-                <div className='campos-card-index-colab'>
-                <Autocomplete
-                fullWidth
+                  <Autocomplete
                     disablePortal
+                    onChange={(e) => setNacion(e.target.value)} 
                     options={Nacionalidad}
                     renderInput={(params) => <TextField {...params} label="Nacionalidad" />}
                     />
-                </div>
 
                 {/* Genero */}
-
-                <div className='campos-card-index-colab'>
-                <FormControl>
+                  <FormControl>
                     <FormLabel id="radio-buttons-group-label">Género</FormLabel>
-                    <RadioGroup
-                        row
-                        aria-labelledby="radio-buttons-group-label"
-                        name="radio-buttons-group"
-                        onChange={(e)=> setGen(e.target.value)}
-                        required
-                        >
-                
-                            <FormControlLabel value="f" control={<Radio />} label="Femenino" />
-                            <FormControlLabel value="m" control={<Radio />} label="Masculino" />
-                            <FormControlLabel value="otro" control={<Radio />} label="Otro" />
-                        
-                    </RadioGroup>
+                      <RadioGroup
+                          row
+                          aria-labelledby="radio-buttons-group-label"
+                          name="radio-buttons-group"
+                          onChange={(e)=> setGen(e.target.value)}
+                          required
+                          style={{display:'flex', flexDirection:'column'}}
+                          >
+                  
+                              <FormControlLabel value="f" control={<Radio />} label="Femenino" />
+                              <FormControlLabel value="m" control={<Radio />} label="Masculino" />
+                              <FormControlLabel value="otro" control={<Radio />} label="Otro" />
+                              
+                      </RadioGroup>
                     </FormControl>
-                </div>
+                
 
                 {/* RFC */}
-
-                <div className='campos-card-index-colab'>
-                <TextField 
-                fullWidth
-                    id="outlined-basic" 
-                    label="RFC:" 
-                    variant="outlined" 
-                    name='RFC'
-                    onChange={(e) => setRfc(e.target.value)} 
-                    value={rfc}
-                    required
-                  />
-                  {!error && value && (
-                <Typography color="green" style={{ marginTop: '10px' }}>
-                RFC válido
-                </Typography>
-                  )}
-                </div>
-
-                  
-              </div>
-             
-              {/* <button type='submit' className='footer-btn-index-colab'>Continuar</button> */}
-              <button type='submit' className='footer-btn-index-colab2'>Continuar</button>
+                  <TextField required                    //Añadir paramentros
+                            label="RFC"
+                            variant="outlined"
+                            value={value}
+                            error={error}
+                            onChange={(e)=> setRfc(e.target.value)}
+                            helperText={error ? 'Ingresa un RFC válido' : ''}
+                                                        
+                            />
+                    {!error && value && (
+                    <Typography color="green" style={{ marginTop: '10px' }}>
+                    RFC válido
+                    </Typography>
+                    )}
+                
+                
+              
               
           </form>
           
-        </div>
-            
-
-        </Box>
-
-
+        </main>
+        <button className='footer-btn-index-colab'>Continuar</button>
+        </body>
+        </html>
 )
 }
 

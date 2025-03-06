@@ -21,3 +21,16 @@ export const Municipios=[
 export const Instituciones=[
     {label: 'Ittux'},
 ];
+
+export const Estudios=[
+    {label: 'Secuendaria'},
+    {label: 'Bachillerato'},
+    {label: 'Licenciatura'},
+    {label: 'Maestría'},
+    {label: 'Doctorado'},
+    {label: 'Otro'}
+];
+
+export const Especialidad=[
+    {label: 'Informática'},
+]
