@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavIndex() {
 
   return (
-    <div className="topBar">
+    <div style={{height:'12vw', display:'flex'}} className="topBar">
         <div className="container-topBar">
             <Link className="link-logo" to='/'>
                 <img className="logo" src={LogoMQerk} />

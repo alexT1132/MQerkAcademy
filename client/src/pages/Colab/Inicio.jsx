@@ -38,66 +38,58 @@ function index() {
 
 
   return (
-    
-    <div>
+    <html lang='es'>
+      <head>
+        <meta charSet='utf-8'/>
+        <meta name='viewport' content="width=device-width, initial-scale=1.0"/>
+      </head>
+      <body>
       <Nav />
-      <div className="index-colab-page">
-        <div className="title-index-colab">
-          <h1 className='registro-previo-title'>Registro previo de datos generales</h1>
-        </div>
-        <div className="form-index-colab">
-          <form className='form-campos-colab' onSubmit={handleSubmit}>
-              <div className='card-index-colab'>
-                <div className='campos-card-index-colab'>
+        <main>
+        <h1 className="title-index-colab">Registro previo de datos generales</h1>
+          <form onSubmit={handleSubmit}>
+              <fieldset className='card-index-colab'>
                   <TextField 
                       id="outlined-basic" 
                       label="Nombre(s):" 
                       variant="outlined" 
                       name='nombre'
-                      sx={{width: '90%'}} 
                       onChange={(e) => setNombres(e.target.value)} 
                       value={nombres}
                       required
                   />
-                </div>
-                <div className='campos-card-index-colab'>
+
                   <TextField 
                     id="outlined-basic" 
                     label="Apellidos:" 
                     variant="outlined" 
                     name='apellidos'
-                    sx={{width: '90%'}} 
                     onChange={(e) => setApellidos(e.target.value)} 
                     value={apellidos}
                     required
                   />
-                </div>
-                <div className='campos-card-index-colab'>
+
                   <TextField 
                     id="outlined-basic" 
                     label="Correo electrónico:" 
                     variant="outlined" 
                     name='email'
-                    sx={{width: '90%'}}
                     onChange={(e) => setCorreo(e.target.value)} 
                     value={correo}
                     required 
                   />
-                </div>
-                <div className='campos-card-index-colab'>
+
                   <TextField 
                     id="outlined-basic" 
                     label="Número de teléfono:" 
                     variant="outlined" 
                     name='telefono'
-                    sx={{width: '90%'}} 
                     onChange={(e) => setTelefono(e.target.value)} 
                     value={telefono}
                     required
                   />
-                </div>
-                <div className='campos-card-index-colab'>
-                  <FormControl fullWidth required sx={{width: '90%'}} >
+
+                  <FormControl fullWidth required>
                       <InputLabel id="demo-simple-select-label">Área de especialización:</InputLabel>
                       <Select
                       onChange={(e) => setArea(e.target.value)} 
@@ -116,9 +108,8 @@ function index() {
                           <MenuItem value='Ciencias Sociales y humanidades'>Ciencias Sociales y humanidades</MenuItem>
                       </Select>
                   </FormControl>
-                </div>
-                <div className='campos-card-index-colab'>
-                  <FormControl fullWidth required sx={{width: '90%'}} >
+
+                  <FormControl fullWidth required >
                       <InputLabel id="demo-simple-select-label">Grado de estudio:</InputLabel>
                       <Select
                       onChange={(e) => setEstudios(e.target.value)} 
@@ -134,25 +125,30 @@ function index() {
                           <MenuItem value='Especialista'>Especialista</MenuItem>
                       </Select>
                   </FormControl>
-                </div>
-              </div>
-              <div className='campo-id-colab'>
-                <TextField 
-                    id="outlined-basic" 
-                    label="Introduce tu ID:" 
-                    variant="outlined" 
-                    name='id'
-                    sx={{width: '95%'}}
-                    onChange={(e) => setIdentificador(e.target.value)} 
-                    value={identificador}
-                    required
+
+              </fieldset>
+
+              
+              <TextField
+                sx={{marginTop:'20px'}}
+                fullWidth
+                id="outlined-basic"
+                label="Introduce tu ID:" 
+                variant="outlined" 
+                name='id'
+                onChange={(e) => setIdentificador(e.target.value)} 
+                value={identificador}
+                required
                 />
-              </div>
+              <br />
               <button type='submit' className='footer-btn-index-colab'>Continuar</button>
+              
           </form>
-        </div>
-      </div>
-    </div>
+          
+        </main>
+        
+        </body>
+    </html>
   )
 }
 

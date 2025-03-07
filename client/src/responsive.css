@@ -1,6 +1,6 @@
 @media (max-width:400px){
   /*------------------------- NAVBAR 1 --------------------------*/
-    .topBar{
+    /* .topBar{
         height: 12%;
     }
     .link-logo{
@@ -23,13 +23,13 @@
         width: 100%;
         height: 38px;
         font-size: 8px;
-      }
+      } */
 
 /* .......................................................... */
 
   /*------------------------- INDEX --------------------------*/
 
-.space{
+/* .space{
     height: 40%;
   }
   .btn-option{
@@ -60,7 +60,7 @@
     background-size: 200%;
     transition: .5s;
     text-transform: uppercase;
-  }
+  } */
 
   /* .......................................................... */
 
@@ -73,18 +73,7 @@
   height: 100%;
   width: 20%;
 }
-.logo-two{
-  width: 100%;
-}
-.title-two{
-  color: #fff;
-  font-size: 11px;
-  text-align: center;
-}
-.topbar-guardianes{
-  height: 100%;
-  width: 20%;
-}
+
 
 /* .......................................................... */
 
@@ -108,16 +97,12 @@
   align-items: center;
 }
 
-.card-login{
+/* .card-login{
   height: 55%;
   width: 70%;
   margin-top: -18%;
-}
-.card-login-header{
-  top: 25%; /* Posición vertical en el medio */
-  left: 51%; /* Posición horizontal en el medio */
-  transform: translate(-50%, -50%);
-}
+} */
+
 .Alert-message-login{
   width: 70%;
 }

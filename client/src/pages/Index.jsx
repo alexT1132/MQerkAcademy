@@ -3,11 +3,13 @@ import IndexBody from "../components/IndexBody";
 
 function Index() {
   return (
-    <div className="page-index">
+
+      <div>
         <NavIndex />
         <IndexBody />
-    </div>
-  )
+      </div>
+
+)
 }
 
-export default Index
+export default Index;

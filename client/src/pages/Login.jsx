@@ -63,14 +63,18 @@ function Login() {
     }, [isAuthenticated]);
 
   return (
+    <>
+        
+    
+    <NavRegistro />
     <div className="page-login">
-        <NavRegistro />
+        
         <div className="sectionLogin">
             <div className="card-login">
                 <div className="card-login-header">
                     <FaUser className="iconUser" />
                 </div>
-                <br /><br />
+
                 <div className='titulo-login-card'>
                     <h1 className='titulo-card'>Iniciar sesión</h1>
                 </div>
@@ -122,6 +126,7 @@ function Login() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

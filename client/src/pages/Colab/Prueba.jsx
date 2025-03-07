@@ -4175,10 +4175,15 @@ function Prueba() {
                                 <p className='indicaciones-wais' style={{textAlign: 'center'}}>Si tienes alguna duda antes de comenzar, consulta con el evaluador.</p>
                                 <br />
                                 <div className="control-btns-steps-one wais">
-                                    <button type="submit" className="btn-next-step-wais">Iniciar</button>
+                                    
                                 </div>
                             </div>
-                        </form>    
+                            <div>
+                            <button type="submit" className="btn-next-step-wais">Iniciar</button>
+                            </div>
+
+                        </form>
+                        
                     )}
                     {step === 17 && (
                         <form onSubmit={nextStep}>
@@ -4630,7 +4635,7 @@ function Prueba() {
                                     <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                         <img src={ImgPlan1} className='img-test-wais'/>
                                     </Grid>
-                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}} >
+                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                                     <FormControl className='frame-resp'>                            
                                             <RadioGroup value={Wais21} onChange={handleRadioChange21}
                                                 aria-labelledby="radio-buttons-group-label"
@@ -4693,7 +4698,7 @@ function Prueba() {
                                     <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                         <img src={ImgPlan2} className='img-test-wais'/>
                                     </Grid>
-                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}} >
+                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
@@ -4766,7 +4771,7 @@ function Prueba() {
                                     <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                         <img src={ImgPlan3} className='img-test-wais'/>
                                     </Grid>
-                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}} >
+                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
@@ -4825,7 +4830,7 @@ function Prueba() {
                                     <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                         <img src={ImgPlan4} className='img-test-wais'/>
                                     </Grid>
-                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}} >
+                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
@@ -4892,7 +4897,7 @@ function Prueba() {
                                     <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                         <img src={ImgPlan5} />
                                     </Grid>
-                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'end', alignItems: 'center'}} >
+                                    <Grid item xs={6} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                                     <FormControl
                                             className='frame-resp'>                            
                                             <RadioGroup
