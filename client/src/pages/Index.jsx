@@ -4,10 +4,10 @@ import IndexBody from "../components/IndexBody";
 function Index() {
   return (
 
-      <div>
+      <>
         <NavIndex />
         <IndexBody />
-      </div>
+      </>
 
 )
 }

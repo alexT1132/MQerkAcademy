@@ -34,7 +34,7 @@ function Login() {
                     usuario,
                     contraseña
                 }
-        
+
                 signin(userData);
 
             } catch (error) {
@@ -61,72 +61,59 @@ function Login() {
             }
         }
     }, [isAuthenticated]);
-
-  return (
-    <>
-        
-    
+return (
+<>
     <NavRegistro />
-    <div className="page-login">
-        
-        <div className="sectionLogin">
-            <div className="card-login">
+        <main className="sectionLogin" onSubmit={handleSubmit}>
+            <form className="card-login">
                 <div className="card-login-header">
                     <FaUser className="iconUser" />
                 </div>
+                <h1 className='titulo-card'>Iniciar sesión</h1>
+                            <div className="input-form-login">
+                            <FaUser className="icon" />
+                            <input
+                            className='input-log'
+                            name="usuario"
+                            type="text" value={usuario}
+                            onChange={(e) => setUsuario(e.target.value)}
+                            placeholder='Usuario...' >
+                            </input>
+                            </div>
 
-                <div className='titulo-login-card'>
-                    <h1 className='titulo-card'>Iniciar sesión</h1>
-                </div>
-                <form onSubmit={handleSubmit}>
-                    <div className="form-login">
-                        <div className="input-form-login">
-                            <div className="icon-login">
-                                <FaUser className="icon" />
-                            </div>
-                            <input 
-                            className='input-log' 
-                            name="usuario" 
-                            type="text" value={usuario} 
-                            onChange={(e) => setUsuario(e.target.value)} 
-                            placeholder='Usuario...' 
+                    
+                            <div className="input-form-login">
+                            <FaLock className="icon" />
+                            <input
+                            className='input-log'
+                            name="contraseña"
+                            type="password"
+                            value={contraseña}
+                            onChange={(e) => setContraseña(e.target.value)}
+                            placeholder='Contraseña...'
                             />
-                        </div>
-                        <div className="input-form-login">
-                            <div className="icon-login">
-                                <FaLock className="icon" />
                             </div>
-                            <input 
-                            className='input-log' 
-                            name="contraseña" 
-                            type="password" 
-                            value={contraseña} 
-                            onChange={(e) => setContraseña(e.target.value)} 
-                            placeholder='Contraseña...' 
-                            />
-                        </div>
-                        <div className="form-btn-login">
                             <button className='btn-login'>Ingresar</button>
-                        </div>
-                        <div className="footer-login">
-                        <p className="linkOne">¿No tienes una cuenta?<Link to='/registro_Est' className="link" >Regístrate aquí...</Link></p>
+                        <div style={{margin:'10px'}}>
+                            <p className="linkOne">¿No tienes una cuenta?
+                                <Link to='/registro_Est' className="link" >Regístrate aquí...
+                                </Link>
+                            </p>
                             <Link>
                                 <p className="linkTwo link">¿Olvidaste tu contraseña?</p>
                             </Link>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <br />
+
+                    
+            </form>
             <div className="Alert-message-login">
-                {LoginErrors.map((error, i) => (
-                    <Message message={error} key={i} />
-                ))}
-                {errors && <Message message={errors} />}
-            </div>
-        </div>
-    </div>
-    </>
+                        {LoginErrors.map((error, i) => (
+                            <Message message={error} key={i} />
+                        ))}
+                        {errors && <Message message={errors} />}
+                    </div>
+        </main>
+</>
   )
 }
 

@@ -22,7 +22,11 @@
   background-size: cover;
   background-position: center;
   border-bottom: 1px solid white;
-  max-height: 34vw;
+  height: 8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container-topBar{
@@ -41,10 +45,8 @@
 }
 
 .logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35vw;
+  width: 10vw;
+  max-width: none;
 }
 
 .titulo-nav{
@@ -54,23 +56,20 @@
   max-height: 100%;
 }
 
-.title{
-  color: #fff;
-  font-size: 3vw;
-  text-align: center;
-}
 
-.link-btn{
+
+.title {
+  color: #fff;
+  text-align: center;
+  height: inherit;
+  font-size: 3vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  max-height: 100%;
-  width: 15%;
+
 }
 
 .btn-nav{
   display: block;
-  width: 10vw;
   border-radius: 100vb;
   margin: 4px;
   font-size: 2vw;
@@ -240,6 +239,7 @@ main{
   align-items: center;
   text-align: center;
   padding-inline: 12%;
+  height: 100vh;
 }
 .cent-form{
   display: grid;
@@ -279,23 +279,18 @@ fieldset{
 
 
 
-.page-registro{
-  height: 100vh;
-  width: 100%;
-}
 
 .sectionRegistro{
   display: flex;
   flex-direction: column;
-  gap: 3%;
   justify-content: center;
   align-items: center;
   background-image: url('./assets/wallpaper.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 87.5vh;
+  height: 100vh;
+  padding-inline: 0;
 }
 
 .Alert-message{
@@ -303,11 +298,13 @@ fieldset{
   width: 18%;
 }
 
-.card-registro{
+.card-registro {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
-  width: 18%;
-  height: 53%;
   border-radius: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .titulo-registro-card{
@@ -321,10 +318,6 @@ fieldset{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50%;
-  margin-bottom: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
 }
 
 .icon-registro{
@@ -369,16 +362,16 @@ fieldset{
 
 /* Inicio login */
 
+:root{
+  height: 100vh;
+  width: auto;
+}
+
 .sectionLogin{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   background-image: url('./assets/wallpaper.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
 }
 
 .card-login{
@@ -387,16 +380,15 @@ fieldset{
   background: #ffffff;
   border-radius: 10%;
   align-items: center;
+  position: relative;
+  top: 10vh;
 }
 
 .card-login-header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #dcdcdc;
   border-radius: 50%;
   position:relative;
-  top: -5%;
+  top: -3%;
   transform: scale(1.5);
 }
 
@@ -415,29 +407,14 @@ fieldset{
 
 .input-form-login{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: none;
-  height: 50%;
-  margin-bottom: 18px;
-  margin-left: 25px;
-  margin-right: 25px;
+  flex-direction: row;
   background: #d5d5d5;
   border-radius: 10px;
+  margin: 1vw;
 }
 
-.icon-login{
-  display: flex;
-  width: 20%;
-  background: #d5d5d5;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-}
 
 .input-log{
-  width: 80%;
-  height: 38px;
   background: #d5d5d5;
   outline: none;
   border-top-right-radius: 20px;
@@ -451,19 +428,24 @@ fieldset{
 }
 
 .form-btn-login{
+  margin: 10px;
+  width: 35vw;
+}
+
+.login-camp{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
 }
 
 .btn-login{
-  width: 80%;
-  height: 35px;
   background: #27a9d1;
   color: #fff;
   border-radius: 20px;
   font-size: 20px;
+  margin: 10px;
+  width: 50%;
+  height: auto;
 }
 
 .btn-login:hover{
@@ -485,11 +467,12 @@ fieldset{
 }
 
 .Alert-message-login{
+  display: flex;
   position: fixed;
-  top: 85%; /* Posición vertical en el medio */
-  left: 50%; /* Posición horizontal en el medio */
-  transform: translate(-50%, -50%);
-  width: 20%;
+  top: 80%;
+  align-items: flex-end;
+  justify-self: center;
+  height: auto;
 }
 
 /* Fin de login */
@@ -781,7 +764,6 @@ fieldset{
 }
 
 .menu ul li .iconos{
-  /* font-size: 20px; */
   width: 25px;
 }
 
@@ -1099,9 +1081,6 @@ fieldset{
   gap: 360px;
 }
 
-/* .checkbox-aparte{
-  width: 20%;
-} */
 
 .contenedor-opcionesmultiples{
   display: grid;
@@ -1793,8 +1772,6 @@ fieldset{
 }
 
 .form-container-colab{
-  /* display: flex;
-  justify-content: center; */
   border: 2px solid #3818c3;
   width: 71%;
   margin-bottom: 50px;
@@ -2067,11 +2044,6 @@ fieldset{
 }
 
 
-/* En caso de fallos de diseño. comentar clase */
-/* .container-steps{
-  width: 150%;
-} */
-
 .btn-next-step-wais{
   background-color: #1170ff;
   width: 10%;
@@ -2188,8 +2160,6 @@ fieldset{
 .div-row{
   display: grid;
   place-items: center stretch;
-  /* flex-direction: row; */
-  /* width: 150%; */
 }
 
 .timerIn{

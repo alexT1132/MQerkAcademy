@@ -59,23 +59,18 @@ function RegisterEst() {
     }, [isAuthenticated]);
 
   return (
-    <div className="page-registro">
-        <NavRegistro />
-        <div className="sectionRegistro">
+    <>
+    <NavRegistro />
+        <main className="sectionRegistro">
             <div className="Alert-message">
                 {registerErrors.map((error, i) => (
                     <Message message={error} key={i} />
                 ))}
                 {errors && <Message message={errors} />}
             </div>
-            <div className="card-registro">
-                <br />
-                <div className="titulo-registro-card">
+            <form className="card-registro">
                     <h1 className="titulo-registro-card">CREA TU USUARIO</h1>
-                </div>
-                <br />
-                <form onSubmit={handleSubmit}>
-                    <div className="cuerpo-registro-eeau">
+                <fieldset onSubmit={handleSubmit}>
                         <div className="input-form-registro">
                             <div className="icon-section-registro">
                                 <FaUser className="icon-registro" />
@@ -105,11 +100,10 @@ function RegisterEst() {
                         <div className="footer-registro">
                             <button className="btn-registro">Continuar</button>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                </fieldset>
+            </form>
+        </main>
+    </>
   )
 }
 
